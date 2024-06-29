@@ -69,7 +69,7 @@ func readFromFile(filename string) deck {
 }
 
 func (d deck) shuffle() deck {
-	for i, _ := range d {
+	for i := range d {
 		newPosition := rand.Intn(len(d) - 1)
 		d[i], d[newPosition] = d[newPosition], d[i]
 	}
